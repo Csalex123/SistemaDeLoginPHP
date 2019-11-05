@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url("../img/background.png");
+	background-position: 50% 20%;
+	color: white;
+	font-family: arial; 
+}
+
+a{	/* Formatando o LINK de direcionamento para cadastro */
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+
+div#corpo{
+	width: 430px;
+	margin: 200px auto 0px auto; /* Para centralizar */
+}
+
+div#corpo h1{ /* Título */
+	text-align: center;
+	padding: 20px;
+}
+
+
+input[type=submit]{
+	width: 100%;
+}
+
+/* Mudança ao passar encima do botão */
+input[type=submit]:hover{
+	background-color: white;
+}
+
+/* Campo de dados do formulário de login*/
+input{
+	display: block;
+	height: 50px;
+	width: 400px;
+	margin: 10px;
+	border-radius: 30px;
+	border: 1px solid black;
+	font-size: 18px;
+	padding: 10px 20px;
+}
