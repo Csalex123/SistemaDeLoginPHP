@@ -13,7 +13,7 @@ Class Usuario{
 		try {
 			$pdo = new PDO("mysql: dbname=".$nome.";host:".$host,$usuario,$senha);
 		} catch (PDOException $e) {
-		 global $msgErro = $e->getMessage();
+		  this.$msgErro = $e->getMessage();
 		}	
 
 	}
@@ -38,7 +38,7 @@ Class Usuario{
 			$sql->bindValue(":n", $nome);
 			$sql->bindValue(":t", $telefone);
 			$sql->bindValue(":e", $email);
-			$sql->bindValeu(":s", $senha);
+			$sql->bindValeu(":s", md5($senha));
 			$sql->execute();
 			return true;
 		}
@@ -48,11 +48,27 @@ Class Usuario{
 
 	public function efetuarLogin($email, $senha){
 		global $pdo;
+
+		$sql = $pdo->prepare("SELECT id_usuario FROM WHERE email = :e AND senha = :s");
+
+		$sql->bindValue(":e",$email);
+		$sql->bindValue(":s",md5($senha));
+		$sql->execute();
+
+		if ($sql->rowCount() > 0) {
+			$dado = $sql->fetch(); //Colocando os dados do usuário em um ARRAY
+			session_start();
+			$_SESSION['id_usuario'] = $dado['id_usuario']; 
+			return true; //Está cadastrado no SISTEMA 
+
+		}else{
+			return false;
+		}
 	}	
 
+
+
 }
-
-
 
 
 ?>
