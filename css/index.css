@@ -29,11 +29,15 @@ div#corpo h1{ /* Título */
 
 input[type=submit]{
 	width: 100%;
+	background: #606060;
+	border: none;
+	cursor: pointer;
 }
 
 /* Mudança ao passar encima do botão */
 input[type=submit]:hover{
 	background-color: white;
+	color: black;
 }
 
 /* Campo de dados do formulário de login*/
@@ -46,4 +50,20 @@ input{
 	border: 1px solid black;
 	font-size: 18px;
 	padding: 10px 20px;
+	background-color: rgba(255,255,255,0.6);
+	color: white;
+	outline: none;
 }
+
+.placeholder::-webkit-input-placeholder{
+    color:#C4C;
+    text-transform: uppercase;
+    font-style: bold;
+}
+.placeholder::-moz-placeholder {
+    color:#C4C;
+    text-transform: uppercase;
+    font-style: bold;
+}​
+
+
