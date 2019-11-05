@@ -1,0 +1,11 @@
+create database sistema_login;
+
+use sistema_login;
+
+create table usuarios(
+	id_usuario int AUTO_INCREMENT PRIMARY key,
+    nome varchar(45),
+    telefone varchar(30),
+    email varchar(65),
+    senha varchar(32) 
+);

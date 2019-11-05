@@ -9,9 +9,9 @@
 
     <div id="corpo">
         <h1>SISTEMA DE LOGIN ORIENTADO A OBJETO</h1>
-        <form action="efetuarLogin.php" method="" >
-            <input type="email" name="" id="email" placeholder="Preencha seu E-mail">
-            <input type="password" name="" id="senha" placeholder="Preencha sua Senha">
+        <form  method="" >
+            <input type="email" name="email" id="email" placeholder="Preencha seu E-mail" maxlength="65" minlength="5">
+            <input type="password" name="senha" id="senha" placeholder="Preencha sua Senha" maxlength="15" minlength="4">
             <input type="submit" value="ENTRAR">
             <a href="cadastro.php" >Ainda não é inscrito? <b> Cadastrar-se!</b> </a>
         </form> 
